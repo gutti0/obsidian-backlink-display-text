@@ -1,6 +1,6 @@
 {
   "name": "obsidian-backlink-display-text",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Obsidian plugin to update backlink display text from a note property.",
   "scripts": {

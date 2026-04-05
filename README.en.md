@@ -12,6 +12,7 @@ An Obsidian plugin that updates the display text of backlinks to the active note
 - Shows an Obsidian notice with the number of links updated
 - Lets you choose which frontmatter property to use, with `title` as the default
 - Shows an Obsidian notice when the target property is empty
+- Switches command and setting text between English and Japanese based on the Obsidian app language
 
 ## Commands
 
