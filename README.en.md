@@ -44,3 +44,21 @@ npm install
 npm run check
 npm run build
 ```
+
+## Releases
+
+BRAT can install this plugin from the GitHub repository URL, but Obsidian's release flow relies on GitHub Releases containing `manifest.json`, `main.js`, and `versions.json`. This repository includes GitHub Actions to build and publish those assets on tag push.
+
+1. Update the version in `manifest.json`, `package.json`, and `versions.json`.
+2. Push `main`.
+3. In the repository settings, set Actions `Workflow permissions` to `Read and write permissions`.
+4. Create and push a git tag that exactly matches the version.
+
+```bash
+git tag 0.1.0
+git push origin 0.1.0
+```
+
+If the tag exactly matches `manifest.json`'s version, GitHub Actions creates a GitHub Release and uploads `manifest.json`, `main.js`, and `versions.json`.
+
+If the tag contains a prerelease suffix such as `-beta.1` or `-preview.1`, the workflow creates the GitHub Release as a prerelease as well.

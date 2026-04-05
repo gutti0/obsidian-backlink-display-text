@@ -44,3 +44,21 @@ npm install
 npm run check
 npm run build
 ```
+
+## リリース
+
+BRAT 自体は GitHub リポジトリ URL を登録して使えますが、Obsidian の配布フローでは GitHub Releases にある `manifest.json` / `main.js` / `versions.json` が重要になります。そのため、このリポジトリでは GitHub Actions で release asset を作る前提にしています。
+
+1. `manifest.json` と `package.json` と `versions.json` の version を更新します。
+2. `main` に push します。
+3. GitHub の repository settings で Actions の `Workflow permissions` を `Read and write permissions` にします。
+4. version と同じ名前の git tag を作って push します。
+
+```bash
+git tag 0.1.0
+git push origin 0.1.0
+```
+
+タグが `manifest.json` の version と完全一致していれば、GitHub Actions が release を作成して `manifest.json` / `main.js` / `versions.json` を添付します。
+
+タグ名に `-beta.1` や `-preview.1` のようなハイフン付き pre-release 識別子が入っている場合は、GitHub Release も pre-release として作成されます。
