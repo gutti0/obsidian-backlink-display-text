@@ -1,0 +1,10 @@
+{
+  "id": "backlink-display-text",
+  "name": "Backlink Display Text",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Update backlink display text for the active note from a chosen property.",
+  "author": "OpenAI Codex",
+  "authorUrl": "https://openai.com",
+  "isDesktopOnly": false
+}

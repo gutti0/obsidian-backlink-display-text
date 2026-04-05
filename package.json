@@ -1,0 +1,17 @@
+{
+  "name": "obsidian-backlink-display-text",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Obsidian plugin to update backlink display text from a note property.",
+  "scripts": {
+    "build": "node esbuild.config.mjs production",
+    "dev": "node esbuild.config.mjs",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "esbuild": "^0.25.9",
+    "obsidian": "latest",
+    "typescript": "^5.9.3"
+  }
+}

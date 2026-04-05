@@ -1,0 +1,46 @@
+# Obsidian Backlink Display Text
+
+[English README](./README.en.md)
+
+表示中ノートへのバックリンクをたどり、リンク先表示名の `display text` を frontmatter プロパティの値で更新する Obsidian プラグインです。ユニークノートのようにファイル名が変わっても、見せたい表示名をそろえやすくする用途を想定しています。
+
+## できること
+
+- 現在開いているノートを参照しているバックリンクだけを対象に更新する
+- コマンドAは、対象リンクの `display text` を設定値で常に置き換える
+- コマンドBは、すでに `display text` が設定されているリンクをスキップする
+- 更新件数を Obsidian の Notice で表示する
+- `display text` に使うプロパティ名を設定から変更できる
+- 対象プロパティが空なら Notice で知らせる
+
+## コマンド
+
+- `Replace backlink display text with property value`
+- `Replace backlink display text with property value (skip links that already have display text)`
+
+## 設定
+
+- `Property used for display text`
+  - デフォルトは `title`
+  - frontmatter の指定プロパティ値を `display text` として使います
+
+## BRAT での導入
+
+1. Obsidian で BRAT をインストールします。
+2. `BRAT: Add a beta plugin for testing` を実行します。
+3. リポジトリ URL に `https://github.com/gutti0/obsidian-backlink-display-text` を入力します。
+4. Community Plugins で `Backlink Display Text` を有効化します。
+
+このリポジトリは BRAT が読み込む配布ファイルをルートに置いています。
+
+- `manifest.json`
+- `main.js`
+- `versions.json`
+
+## 開発
+
+```bash
+npm install
+npm run check
+npm run build
+```
